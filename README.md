@@ -1,8 +1,8 @@
 # Santander Customer Satisfaction
 
-Predicting which bank customers are unhappy before they close their account, using the [Kaggle Santander Customer Satisfaction](https://www.kaggle.com/c/santander-customer-satisfaction) data. There's a small [Streamlit app](https://santander-customer-satisfaction-mwi9wabakglouieoynhvj6.streamlit.app/) that scores a single customer with the final model.
+**[Live app](https://santander-customer-satisfaction-mwi9wabakglouieoynhvj6.streamlit.app/)**
 
-**Live demo:** https://santander-customer-satisfaction-mwi9wabakglouieoynhvj6.streamlit.app/
+Predicting which bank customers are unhappy before they close their account, using the [Kaggle Santander Customer Satisfaction](https://www.kaggle.com/c/santander-customer-satisfaction) data. There's a small Streamlit app that scores a single customer with the final model.
 
 Having worked in a bank, this problem felt familiar, so I wanted to do it properly: no leakage, honest validation, and a model small enough that someone could actually use it.
 
