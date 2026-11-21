@@ -6,6 +6,8 @@ Predicting which bank customers are unhappy before they close their account, usi
 
 Having worked in a bank, this problem felt familiar, so I wanted to do it properly: no leakage, honest validation, and a model small enough that someone could actually use it.
 
+New to the project? [The story behind it](docs/PROJECT_STORY.md) walks through what I did and why, in plain language.
+
 ## The data
 
 76,020 customers, 370 anonymised features and a binary target (1 = dissatisfied). Only about 4% are unhappy, so the classes are very imbalanced. Kaggle never said what the columns mean (`var15`, `saldo_var30`, ...), so the app gives them descriptive labels and keeps the original name next to each one.
