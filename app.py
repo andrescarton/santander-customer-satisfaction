@@ -55,35 +55,35 @@ CSS = """
   .block-container { max-width: 760px; padding-top: 2.5rem; }
   h1 { font-weight: 650; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
   .eyebrow { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
-             color: #1F4E79; font-weight: 600; margin-bottom: 0.25rem; }
-  .lede { color: #555; font-size: 1rem; line-height: 1.55; margin-bottom: 1.5rem; }
+             color: #7FB0E0; font-weight: 600; margin-bottom: 0.25rem; }
+  .lede { color: #A8ACB2; font-size: 1rem; line-height: 1.55; margin-bottom: 1.5rem; }
   .section-title { font-size: 0.95rem; font-weight: 600; margin: 0.25rem 0 0.1rem; }
   @media (max-width: 640px) { h1 { font-size: 2rem !important; } }
-  [data-testid="stWidgetLabel"] code { color: #8A8A84; background: transparent; padding: 0; font-size: 0.72rem; }
+  [data-testid="stWidgetLabel"] code { color: #7D838B; background: transparent; padding: 0; font-size: 0.72rem; }
 
-  .result { border: 1px solid #DDDDD6; border-radius: 10px; background: #FFFFFF; padding: 1.5rem 1.6rem 1.3rem; margin-top: 0.5rem; }
-  .result-label { font-size: 0.85rem; color: #666; }
+  .result { border: 1px solid #2C323A; border-radius: 10px; background: #181C21; padding: 1.5rem 1.6rem 1.3rem; margin-top: 0.5rem; }
+  .result-label { font-size: 0.85rem; color: #A8ACB2; }
   .result-row { display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; margin: 0.2rem 0 1.2rem; }
   .result-value { font-size: 2.6rem; font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; }
   .pill { font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; }
-  .pill.low { background: #E3F1E8; color: #1E6B3A; }
-  .pill.medium { background: #FBF0D9; color: #8A5A00; }
-  .pill.high { background: #FBE3E1; color: #A1261B; }
-  .relative { font-size: 0.9rem; color: #555; }
+  .pill.low { background: #1D3B2A; color: #8FD6A8; }
+  .pill.medium { background: #43361A; color: #F0C870; }
+  .pill.high { background: #4A2220; color: #F2A097; }
+  .relative { font-size: 0.9rem; color: #A8ACB2; }
 
   .bar { position: relative; height: 10px; border-radius: 5px; display: flex; overflow: hidden; }
   .bar span { height: 100%; }
-  .marker { position: absolute; top: -5px; width: 3px; height: 20px; background: #1C1C1C; border-radius: 2px; transform: translateX(-50%); }
+  .marker { position: absolute; top: -5px; width: 3px; height: 20px; background: #F2F2EF; border-radius: 2px; transform: translateX(-50%); }
   .bar-wrap { position: relative; margin: 0 0 0.4rem; }
-  .base-tick { position: absolute; top: -3px; height: 16px; border-left: 2px dotted #666; }
-  .scale { position: relative; height: 1.1rem; font-size: 0.72rem; color: #888; }
+  .base-tick { position: absolute; top: -3px; height: 16px; border-left: 2px dotted #A8ACB2; }
+  .scale { position: relative; height: 1.1rem; font-size: 0.72rem; color: #7D838B; }
   .scale span { position: absolute; transform: translateX(-50%); }
   .scale span:first-child { transform: none; }
   .scale span:last-child { transform: translateX(-100%); }
-  .legend { font-size: 0.78rem; color: #777; margin-top: 0.6rem; }
+  .legend { font-size: 0.78rem; color: #8A9097; margin-top: 0.6rem; }
 
-  .footer { font-size: 0.78rem; color: #888; margin-top: 2.5rem; border-top: 1px solid #E4E4DE; padding-top: 0.9rem; line-height: 1.6; }
-  .footer a { color: #1F4E79; }
+  .footer { font-size: 0.78rem; color: #7D838B; margin-top: 2.5rem; border-top: 1px solid #2C323A; padding-top: 0.9rem; line-height: 1.6; }
+  .footer a { color: #7FB0E0; }
 </style>
 """
 
@@ -140,9 +140,9 @@ def result_card(prob):
         return min(x, SCALE_MAX) / SCALE_MAX * 100
 
     bands = (
-        f'<span style="width:{pos(LOW_MAX)}%;background:#CFE6D7"></span>'
-        f'<span style="width:{pos(MEDIUM_MAX) - pos(LOW_MAX)}%;background:#F3DFB0"></span>'
-        f'<span style="width:{100 - pos(MEDIUM_MAX)}%;background:#F0C4BF"></span>'
+        f'<span style="width:{pos(LOW_MAX)}%;background:#2F6B48"></span>'
+        f'<span style="width:{pos(MEDIUM_MAX) - pos(LOW_MAX)}%;background:#8A6A24"></span>'
+        f'<span style="width:{100 - pos(MEDIUM_MAX)}%;background:#8E3A33"></span>'
     )
     ticks = [0, LOW_MAX, MEDIUM_MAX, SCALE_MAX]
     scale = "".join(f'<span style="left:{pos(t)}%">{pct(t)}{"+" if t == SCALE_MAX else ""}</span>' for t in ticks)
