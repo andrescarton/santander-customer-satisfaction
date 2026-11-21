@@ -6,7 +6,7 @@ Having worked in a bank, this problem felt familiar, so I wanted to do it proper
 
 ## The data
 
-76,020 customers, 370 anonymised features and a binary target (1 = dissatisfied). Only about 4% are unhappy, so the classes are very imbalanced. Kaggle never said what the columns mean (`var15`, `saldo_var30`, ...), so the app shows them with their original names.
+76,020 customers, 370 anonymised features and a binary target (1 = dissatisfied). Only about 4% are unhappy, so the classes are very imbalanced. Kaggle never said what the columns mean (`var15`, `saldo_var30`, ...), so the app gives them descriptive labels and keeps the original name next to each one.
 
 ## What I did
 
